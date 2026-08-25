@@ -1,110 +1,1356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Santa Cruz Pet Watch</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Santa Cruz Pet Watch helps families report, find, and reunite lost and found pets in Santa Cruz de la Sierra."
+    >
+
+    <title>Santa Cruz Pet Watch | Lost & Found Pets</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-<nav class="navbar">
-<h1>🐾 Santa Cruz Pet Watch</h1>
-<div class="nav-links">
-<a href="#reports">Pet Reports</a>
-<a href="#report-form">Report a Pet</a>
-</div>
-</nav>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+    <nav class="navbar">
+
+        <a href="#" class="brand">
+            <span class="brand-icon">🐾</span>
+
+            <span>
+                <strong>Santa Cruz</strong>
+                <small>Pet Watch</small>
+            </span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#reports">Pet Reports</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#resources">Pet Safety</a>
+            <a href="#report-form" class="nav-button">
+                Report a Pet
+            </a>
+        </div>
+
+    </nav>
+
 </header>
+
+
 <main>
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-<h2>Help Bring Lost Pets Home</h2>
-<p>
-Find lost and found pets around Santa Cruz de la Sierra.
-Browse reports and help reunite pets with their families.
-</p>
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            <span>💗</span>
+            Community-powered pet recovery
+        </div>
+
+        <h1>
+            Helping lost pets
+            <span>find their way home.</span>
+        </h1>
+
+        <p class="hero-text">
+            Santa Cruz Pet Watch connects pet owners, neighbors,
+            shelters, and animal lovers across Santa Cruz de la Sierra
+            to help lost and found pets get back to their families.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#reports" class="primary-button">
+                🔎 Browse Pet Reports
+            </a>
+
+            <a href="#report-form" class="secondary-button">
+                🐾 Report a Pet
+            </a>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div class="stat">
+                <strong>24/7</strong>
+                <span>Community reports</span>
+            </div>
+
+            <div class="stat">
+                <strong>4+</strong>
+                <span>Areas covered</span>
+            </div>
+
+            <div class="stat">
+                <strong>100%</strong>
+                <span>Community focused</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="hero-image-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=85"
+                alt="Happy golden dog"
+            >
+
+            <div class="image-overlay-card">
+
+                <span class="overlay-icon">💗</span>
+
+                <div>
+                    <strong>Every pet matters</strong>
+                    <small>
+                        Help us bring them home.
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- =========================
+     QUICK HELP
+========================= -->
+
+<section class="quick-help">
+
+    <div class="help-card">
+
+        <div class="help-icon">🔍</div>
+
+        <div>
+            <h3>Looking for a lost pet?</h3>
+            <p>
+                Search current reports by status and area.
+            </p>
+        </div>
+
+        <a href="#reports">View reports →</a>
+
+    </div>
+
+
+    <div class="help-card">
+
+        <div class="help-icon">🐕</div>
+
+        <div>
+            <h3>Found a pet?</h3>
+            <p>
+                Share the information so their family can find them.
+            </p>
+        </div>
+
+        <a href="#report-form">Report a pet →</a>
+
+    </div>
+
+
+    <div class="help-card">
+
+        <div class="help-icon">🤝</div>
+
+        <div>
+            <h3>Want to help?</h3>
+            <p>
+                Share reports with neighbors and local groups.
+            </p>
+        </div>
+
+        <a href="#resources">Learn more →</a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REPORTS
+========================= -->
+
 <section id="reports" class="reports-section">
-<h2>Pet Reports</h2>
-<div class="filters">
-<div>
-<label for="status-filter">Status</label>
-<select id="status-filter">
-<option value="all">All</option>
-<option value="Lost">Lost</option>
-<option value="Found">Found</option>
-</select>
-</div>
-<div>
-<label for="area-filter">Area</label>
-<select id="area-filter">
-<option value="all">All Areas</option>
-<option value="Equipetrol">Equipetrol</option>
-<option value="Urubó">Urubó</option>
-<option value="Sirari">Sirari</option>
-<option value="Plan 3000">Plan 3000</option>
-</select>
-</div>
-</div>
-<div id="pet-container" class="pet-grid">
-<!-- Pet cards are generated with JavaScript -->
-</div>
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                COMMUNITY REPORTS
+            </span>
+
+            <h2>Lost & Found Pets</h2>
+
+            <p>
+                Browse recent reports from around Santa Cruz
+                and keep an eye out for pets in your neighborhood.
+            </p>
+
+        </div>
+
+        <a href="#report-form" class="outline-button">
+            + Add Report
+        </a>
+
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filters">
+
+        <div class="filter-group">
+
+            <label for="status-filter">
+                Status
+            </label>
+
+            <select id="status-filter">
+
+                <option value="all">
+                    All Reports
+                </option>
+
+                <option value="Lost">
+                    Lost
+                </option>
+
+                <option value="Found">
+                    Found
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="filter-group">
+
+            <label for="area-filter">
+                Area
+            </label>
+
+            <select id="area-filter">
+
+                <option value="all">
+                    All Areas
+                </option>
+
+                <option value="Equipetrol">
+                    Equipetrol
+                </option>
+
+                <option value="Urubó">
+                    Urubó
+                </option>
+
+                <option value="Sirari">
+                    Sirari
+                </option>
+
+                <option value="Plan 3000">
+                    Plan 3000
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <label for="search-input">
+                Search
+            </label>
+
+            <div class="search-input-wrapper">
+
+                <span>🔎</span>
+
+                <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Search pet descriptions..."
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PET CARDS -->
+
+    <div id="pet-container" class="pet-grid">
+
+        <!-- Example pet card -->
+
+        <article class="pet-card">
+
+            <div class="pet-image-wrapper">
+
+                <img
+                    src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=85"
+                    alt="Brown and white dog"
+                >
+
+                <span class="status-badge lost">
+                    LOST
+                </span>
+
+            </div>
+
+            <div class="pet-card-content">
+
+                <div class="pet-card-top">
+
+                    <span class="pet-type">
+                        🐕 Dog
+                    </span>
+
+                    <span class="pet-date">
+                        2 days ago
+                    </span>
+
+                </div>
+
+                <h3>Brown & White Dog</h3>
+
+                <p class="pet-location">
+                    📍 Equipetrol
+                </p>
+
+                <p>
+                    Medium-sized dog with a blue collar.
+                    Very friendly but may be nervous around traffic.
+                </p>
+
+                <div class="pet-card-footer">
+
+                    <span>
+                        📞 Contact available
+                    </span>
+
+                    <button>
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="pet-card">
+
+            <div class="pet-image-wrapper">
+
+                <img
+                    src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=85"
+                    alt="Gray cat"
+                >
+
+                <span class="status-badge found">
+                    FOUND
+                </span>
+
+            </div>
+
+            <div class="pet-card-content">
+
+                <div class="pet-card-top">
+
+                    <span class="pet-type">
+                        🐈 Cat
+                    </span>
+
+                    <span class="pet-date">
+                        3 days ago
+                    </span>
+
+                </div>
+
+                <h3>Gray Tabby Cat</h3>
+
+                <p class="pet-location">
+                    📍 Sirari
+                </p>
+
+                <p>
+                    Small gray tabby found near a residential
+                    area. Wearing a red collar.
+                </p>
+
+                <div class="pet-card-footer">
+
+                    <span>
+                        📞 Contact available
+                    </span>
+
+                    <button>
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="pet-card">
+
+            <div class="pet-image-wrapper">
+
+                <img
+                    src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=700&q=85"
+                    alt="Golden retriever"
+                >
+
+                <span class="status-badge lost">
+                    LOST
+                </span>
+
+            </div>
+
+            <div class="pet-card-content">
+
+                <div class="pet-card-top">
+
+                    <span class="pet-type">
+                        🐕 Dog
+                    </span>
+
+                    <span class="pet-date">
+                        5 days ago
+                    </span>
+
+                </div>
+
+                <h3>Golden Retriever</h3>
+
+                <p class="pet-location">
+                    📍 Urubó
+                </p>
+
+                <p>
+                    Large golden dog with a green collar.
+                    Last seen walking near the main road.
+                </p>
+
+                <div class="pet-card-footer">
+
+                    <span>
+                        📞 Contact available
+                    </span>
+
+                    <button>
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div class="load-more">
+
+        <button class="secondary-button">
+            Load More Reports
+        </button>
+
+    </div>
+
 </section>
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section id="how-it-works" class="how-section">
+
+    <div class="section-heading centered">
+
+        <span class="eyebrow">
+            HOW IT WORKS
+        </span>
+
+        <h2>Small actions can make a big difference.</h2>
+
+        <p>
+            Whether you've lost a pet, found one, or simply want
+            to help, the process is simple.
+        </p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <div class="step-icon">
+                📝
+            </div>
+
+            <h3>Create a report</h3>
+
+            <p>
+                Add a photo, location, description, and
+                contact information.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <div class="step-icon">
+                📢
+            </div>
+
+            <h3>Spread the word</h3>
+
+            <p>
+                Share the report with friends, neighbors,
+                and local community groups.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <div class="step-icon">
+                👀
+            </div>
+
+            <h3>Keep watch</h3>
+
+            <p>
+                Check nearby areas and look for matching
+                reports from other users.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <div class="step-icon">
+                🏡
+            </div>
+
+            <h3>Bring them home</h3>
+
+            <p>
+                Connect with the owner and help reunite
+                the pet with their family.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     AREAS
+========================= -->
+
+<section class="areas-section">
+
+    <div class="areas-content">
+
+        <span class="eyebrow">
+            SEARCH BY AREA
+        </span>
+
+        <h2>
+            Keep an eye on your neighborhood.
+        </h2>
+
+        <p>
+            Lost pets can travel farther than expected.
+            Checking nearby neighborhoods can greatly increase
+            the chances of finding them.
+        </p>
+
+
+        <div class="area-list">
+
+            <a href="#reports" class="area-card">
+                <span>🌿</span>
+                <div>
+                    <strong>Equipetrol</strong>
+                    <small>View reports</small>
+                </div>
+                <span>→</span>
+            </a>
+
+            <a href="#reports" class="area-card">
+                <span>🌳</span>
+                <div>
+                    <strong>Urubó</strong>
+                    <small>View reports</small>
+                </div>
+                <span>→</span>
+            </a>
+
+            <a href="#reports" class="area-card">
+                <span>🏘️</span>
+                <div>
+                    <strong>Sirari</strong>
+                    <small>View reports</small>
+                </div>
+                <span>→</span>
+            </a>
+
+            <a href="#reports" class="area-card">
+                <span>🏙️</span>
+                <div>
+                    <strong>Plan 3000</strong>
+                    <small>View reports</small>
+                </div>
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="areas-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=1000&q=85"
+            alt="Dog and owner outdoors"
+        >
+
+        <div class="image-caption">
+
+            <span>🐾</span>
+
+            <div>
+                <strong>Neighbors helping neighbors</strong>
+                <small>
+                    Your next-door neighbor may be the
+                    person who spots a missing pet.
+                </small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REPORT FORM
+========================= -->
+
 <section id="report-form" class="form-section">
-<h2>Report a Pet</h2>
-<form id="pet-form">
-<div class="form-group">
-<label for="pet-status">Status</label>
-<select id="pet-status" name="status" required>
-<option value="">Select status</option>
-<option value="Lost">Lost</option>
-<option value="Found">Found</option>
-</select>
-</div>
-<div class="form-group">
-<label for="image-url">Image URL</label>
-<input
-type="url"
-id="image-url"
-name="imageUrl"
-placeholder="https://example.com/pet.jpg"
-required
->
-</div>
-<div class="form-group">
-<label for="pet-area">Area</label>
-<select id="pet-area" name="area" required>
-<option value="">Select area</option>
-<option value="Equipetrol">Equipetrol</option>
-<option value="Urubó">Urubó</option>
-<option value="Sirari">Sirari</option>
-<option value="Plan 3000">Plan 3000</option>
-</select>
-</div>
-<div class="form-group">
-<label for="contact">Contact Information</label>
-<input
-type="text"
-id="contact"
-name="contact"
-placeholder="Phone number or email"
-required
->
-</div>
-<div class="form-group">
-<label for="description">Description</label>
-<textarea
-id="description"
-></textarea>
-</div>
-<button type="submit">Submit Report</button>
-</form>
-<p id="form-message"></p>
+
+    <div class="form-intro">
+
+        <span class="eyebrow">
+            HELP A PET GET HOME
+        </span>
+
+        <h2>Report a Lost or Found Pet</h2>
+
+        <p>
+            The more details you provide, the easier it will be
+            for someone to recognize the pet.
+        </p>
+
+        <div class="form-tips">
+
+            <div>
+                <span>📸</span>
+                <strong>Add a clear photo</strong>
+                <small>
+                    Choose an image where the pet's face
+                    and markings are visible.
+                </small>
+            </div>
+
+            <div>
+                <span>📍</span>
+                <strong>Include the area</strong>
+                <small>
+                    Tell people where the pet was last seen
+                    or found.
+                </small>
+            </div>
+
+            <div>
+                <span>☎️</span>
+                <strong>Provide contact details</strong>
+                <small>
+                    Give people a safe way to reach you.
+                </small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <form id="pet-form" class="pet-form">
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="pet-status">
+                    Report Type
+                </label>
+
+                <select
+                    id="pet-status"
+                    name="status"
+                    required
+                >
+
+                    <option value="">
+                        Select status
+                    </option>
+
+                    <option value="Lost">
+                        I lost a pet
+                    </option>
+
+                    <option value="Found">
+                        I found a pet
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="pet-type">
+                    Pet Type
+                </label>
+
+                <select
+                    id="pet-type"
+                    name="petType"
+                    required
+                >
+
+                    <option value="">
+                        Select pet type
+                    </option>
+
+                    <option value="Dog">
+                        🐕 Dog
+                    </option>
+
+                    <option value="Cat">
+                        🐈 Cat
+                    </option>
+
+                    <option value="Bird">
+                        🐦 Bird
+                    </option>
+
+                    <option value="Other">
+                        🐾 Other
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="pet-name">
+                Pet Name
+                <span>(if known)</span>
+            </label>
+
+            <input
+                type="text"
+                id="pet-name"
+                name="petName"
+                placeholder="e.g. Luna"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="image-url">
+                Pet Photo URL
+            </label>
+
+            <input
+                type="url"
+                id="image-url"
+                name="imageUrl"
+                placeholder="https://example.com/pet-photo.jpg"
+                required
+            >
+
+            <small class="field-help">
+                Use a direct link to an image of the pet.
+            </small>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="pet-area">
+                    Area
+                </label>
+
+                <select
+                    id="pet-area"
+                    name="area"
+                    required
+                >
+
+                    <option value="">
+                        Select area
+                    </option>
+
+                    <option value="Equipetrol">
+                        Equipetrol
+                    </option>
+
+                    <option value="Urubó">
+                        Urubó
+                    </option>
+
+                    <option value="Sirari">
+                        Sirari
+                    </option>
+
+                    <option value="Plan 3000">
+                        Plan 3000
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="last-seen">
+                    Date Last Seen
+                </label>
+
+                <input
+                    type="date"
+                    id="last-seen"
+                    name="lastSeen"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="location">
+                Last Known Location
+            </label>
+
+            <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Street, landmark, neighborhood..."
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                name="description"
+                rows="6"
+                placeholder="Describe the pet's color, size, breed, collar, markings, behavior, and anything else that could help someone identify them..."
+                required
+            ></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="contact">
+                Contact Information
+            </label>
+
+            <input
+                type="text"
+                id="contact"
+                name="contact"
+                placeholder="Phone number, WhatsApp, or email"
+                required
+            >
+
+            <small class="field-help">
+                Only include contact information you are comfortable sharing.
+            </small>
+
+        </div>
+
+
+        <div class="form-check">
+
+            <input
+                type="checkbox"
+                id="contact-consent"
+                required
+            >
+
+            <label for="contact-consent">
+                I confirm that the information above is accurate
+                and I am comfortable being contacted about this report.
+            </label>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="submit-button"
+        >
+            🐾 Submit Pet Report
+        </button>
+
+        <p id="form-message"></p>
+
+    </form>
+
 </section>
+
+
+<!-- =========================
+     SAFETY / RESOURCES
+========================= -->
+
+<section id="resources" class="resources-section">
+
+    <div class="section-heading centered">
+
+        <span class="eyebrow">
+            PET RECOVERY TIPS
+        </span>
+
+        <h2>What to do when a pet goes missing</h2>
+
+        <p>
+            Staying organized and acting quickly can make a
+            big difference.
+        </p>
+
+    </div>
+
+
+    <div class="resource-grid">
+
+        <article class="resource-card">
+
+            <div class="resource-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=700&q=85"
+                    alt="Dog sitting outdoors"
+                >
+
+            </div>
+
+            <div class="resource-content">
+
+                <span>01</span>
+
+                <h3>Search nearby first</h3>
+
+                <p>
+                    Check your home, street, nearby parks,
+                    familiar walking routes, and places where
+                    your pet may hide.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="resource-card">
+
+            <div class="resource-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=700&q=85"
+                    alt="Cat looking through a window"
+                >
+
+            </div>
+
+            <div class="resource-content">
+
+                <span>02</span>
+
+                <h3>Share a clear photo</h3>
+
+                <p>
+                    Use recent photographs that show unique
+                    markings, collars, colors, and facial features.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="resource-card">
+
+            <div class="resource-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=700&q=85"
+                    alt="Two dogs together"
+                >
+
+            </div>
+
+            <div class="resource-content">
+
+                <span>03</span>
+
+                <h3>Tell your community</h3>
+
+                <p>
+                    Ask trusted friends and neighbors to watch
+                    for the pet and share the report.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMMUNITY MESSAGE
+========================= -->
+
+<section class="community-banner">
+
+    <div class="community-paw">
+        🐾
+    </div>
+
+    <div>
+
+        <span class="eyebrow">
+            IT TAKES A COMMUNITY
+        </span>
+
+        <h2>
+            One person can make the difference.
+        </h2>
+
+        <p>
+            If you see a pet that looks lost, don't scroll past.
+            Check the reports, share the information, and help
+            someone get their best friend home.
+        </p>
+
+    </div>
+
+    <a
+        href="#reports"
+        class="primary-button"
+    >
+        Explore Reports
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="faq-section">
+
+    <div class="section-heading centered">
+
+        <span class="eyebrow">
+            FREQUENTLY ASKED QUESTIONS
+        </span>
+
+        <h2>Good to know</h2>
+
+    </div>
+
+
+    <div class="faq-list">
+
+        <details>
+
+            <summary>
+                What information should I include?
+                <span>+</span>
+            </summary>
+
+            <p>
+                Include a clear photo, pet type, color, distinctive
+                markings, location, date last seen, and a reliable
+                way to contact you.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                What should I do if I find a pet?
+                <span>+</span>
+            </summary>
+
+            <p>
+                Keep the pet somewhere safe if you can, check
+                nearby reports, and create a Found report with
+                a clear description and photograph.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Should I share my exact home address?
+                <span>+</span>
+            </summary>
+
+            <p>
+                Avoid publishing sensitive personal information.
+                A neighborhood, nearby landmark, or general area
+                is usually enough for an initial report.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                How can I help if I haven't found a pet?
+                <span>+</span>
+            </summary>
+
+            <p>
+                Sharing reports with people in your neighborhood
+                can dramatically increase the number of people
+                who see them.
+            </p>
+
+        </details>
+
+    </div>
+
+</section>
+
 </main>
-<footer>
-<p>&copy; 2026 Santa Cruz Pet Watch</p>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <a href="#" class="brand footer-logo">
+
+                <span class="brand-icon">
+                    🐾
+                </span>
+
+                <span>
+                    <strong>Santa Cruz</strong>
+                    <small>Pet Watch</small>
+                </span>
+
+            </a>
+
+            <p>
+                A community space dedicated to helping
+                lost and found pets reconnect with their families.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Explore</h3>
+
+            <a href="#reports">
+                Pet Reports
+            </a>
+
+            <a href="#report-form">
+                Report a Pet
+            </a>
+
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Resources</h3>
+
+            <a href="#resources">
+                Pet Safety
+            </a>
+
+            <a href="#resources">
+                Recovery Tips
+            </a>
+
+            <a href="#faq">
+                FAQ
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Santa Cruz</h3>
+
+            <span>
+                📍 Santa Cruz de la Sierra
+            </span>
+
+            <span>
+                💗 Community powered
+            </span>
+
+            <span>
+                🐾 For pets & their families
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Santa Cruz Pet Watch.
+            Made with care for the local pet community.
+        </p>
+
+        <div class="footer-paws">
+            🐾 🐾 🐾
+        </div>
+
+    </div>
+
 </footer>
+
+
 <script src="script.js"></script>
+
 </body>
 </html>

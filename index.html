@@ -150,10 +150,12 @@
 
             <div class="hero-stat">
 
-                <strong>4+</strong>
+                <strong id="report-count">
+                    0
+                </strong>
 
                 <span>
-                    Areas covered
+                    Pet reports
                 </span>
 
             </div>
@@ -401,211 +403,22 @@
         class="pet-grid"
     >
 
-        <!-- CARD 1 -->
-
-        <article class="pet-card">
-
-            <div class="pet-photo">
-
-                <img
-                    src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=900&q=90"
-                    alt="Brown and white dog"
-                >
-
-                <span class="status lost">
-                    LOST
-                </span>
-
-            </div>
-
-
-            <div class="pet-info">
-
-                <div class="pet-meta">
-
-                    <span>
-                        Dog
-                    </span>
-
-                    <span>
-                        2 days ago
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Brown & White Dog
-                </h3>
-
-
-                <div class="pet-location">
-                    Equipetrol
-                </div>
-
-
-                <p>
-                    Medium-sized dog with a blue collar.
-                    Friendly but may be nervous around traffic.
-                </p>
-
-
-                <div class="pet-footer">
-
-                    <span>
-                        Contact available
-                    </span>
-
-                    <button>
-                        View Details
-                    </button>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- CARD 2 -->
-
-        <article class="pet-card">
-
-            <div class="pet-photo">
-
-                <img
-                    src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=900&q=90"
-                    alt="Gray tabby cat"
-                >
-
-                <span class="status found">
-                    FOUND
-                </span>
-
-            </div>
-
-
-            <div class="pet-info">
-
-                <div class="pet-meta">
-
-                    <span>
-                        Cat
-                    </span>
-
-                    <span>
-                        3 days ago
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Gray Tabby Cat
-                </h3>
-
-
-                <div class="pet-location">
-                    Sirari
-                </div>
-
-
-                <p>
-                    Small gray tabby found near a residential
-                    area. Wearing a red collar.
-                </p>
-
-
-                <div class="pet-footer">
-
-                    <span>
-                        Contact available
-                    </span>
-
-                    <button>
-                        View Details
-                    </button>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- CARD 3 -->
-
-        <article class="pet-card">
-
-            <div class="pet-photo">
-
-                <img
-                    src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=900&q=90"
-                    alt="Golden retriever"
-                >
-
-                <span class="status lost">
-                    LOST
-                </span>
-
-            </div>
-
-
-            <div class="pet-info">
-
-                <div class="pet-meta">
-
-                    <span>
-                        Dog
-                    </span>
-
-                    <span>
-                        5 days ago
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    Golden Retriever
-                </h3>
-
-
-                <div class="pet-location">
-                    Urubó
-                </div>
-
-
-                <p>
-                    Large golden dog with a green collar.
-                    Last seen near the main road.
-                </p>
-
-
-                <div class="pet-footer">
-
-                    <span>
-                        Contact available
-                    </span>
-
-                    <button>
-                        View Details
-                    </button>
-
-                </div>
-
-            </div>
-
-        </article>
+        <!-- Firebase reports will appear here -->
+
+        <div class="reports-loading">
+            Loading pet reports...
+        </div>
 
     </div>
 
 
     <div class="center-button">
 
-        <button class="secondary-button">
+        <button
+            id="load-more-button"
+            class="secondary-button"
+            type="button"
+        >
             Load More Reports
         </button>
 
@@ -773,6 +586,7 @@
             <a
                 href="#reports"
                 class="area-card"
+                data-area="Equipetrol"
             >
 
                 <div class="area-icon">
@@ -802,6 +616,7 @@
             <a
                 href="#reports"
                 class="area-card"
+                data-area="Urubó"
             >
 
                 <div class="area-icon">
@@ -831,6 +646,7 @@
             <a
                 href="#reports"
                 class="area-card"
+                data-area="Sirari"
             >
 
                 <div class="area-icon">
@@ -860,6 +676,7 @@
             <a
                 href="#reports"
                 class="area-card"
+                data-area="Plan 3000"
             >
 
                 <div class="area-icon">
@@ -1130,20 +947,20 @@
 
         <div class="form-group">
 
-            <label for="image-url">
-                Pet Photo URL
+            <label for="pet-photo">
+                Pet Photo
             </label>
 
             <input
-                type="url"
-                id="image-url"
-                name="imageUrl"
-                placeholder="https://example.com/pet-photo.jpg"
+                type="file"
+                id="pet-photo"
+                name="petPhoto"
+                accept="image/jpeg,image/png,image/webp"
                 required
             >
 
             <small>
-                Add a direct link to a photo of the pet.
+                Upload a clear JPG, PNG, or WebP photo.
             </small>
 
         </div>
@@ -1710,7 +1527,11 @@
 
 
 
-<script src="script.js"></script>
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script type="module" src="script.js"></script>
 
 </body>
 
